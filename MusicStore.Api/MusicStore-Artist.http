@@ -1,0 +1,35 @@
+### Get All Artists
+GET {{HostAddress}}/api/artists
+Accept: application/json
+
+### Get Artist by ID
+GET {{HostAddress}}/api/artists/81
+Accept: application/json
+
+### Create Artist
+POST {{HostAddress}}/api/artists
+Content-Type: application/json
+
+{
+  "firstName": "test1",
+  "lastName": "test2",
+  "gender": "Male",
+  "country": "IN",
+  "albumId": 22
+}
+
+### Update Artist
+PUT {{HostAddress}}/api/artists/81
+Content-Type: application/json
+
+{
+  "id": 81,
+  "firstName": "test1",
+  "lastName": "test2",
+  "gender": "Female",
+  "country": "UAE",
+  "albumId": 22
+}
+
+### Delete Album
+DELETE {{HostAddress}}/api/artists/81

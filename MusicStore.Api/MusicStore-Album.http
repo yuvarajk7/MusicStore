@@ -1,0 +1,51 @@
+### Get All Albums
+GET {{HostAddress}}/api/albums
+Accept: application/json
+
+### Create Album
+POST {{HostAddress}}/api/albums
+Content-Type: application/json
+
+{
+  "Name": "New Album",
+  "Genre": "Pop",
+  "ReleaseDate": "2023-01-01T00:00:00Z",
+  "TotalSold": 1000,
+  "Rating": 2,
+  "Artists": [
+    {
+      "FirstName": "New",
+      "LastName": "Artist",
+      "Gender": "Male",
+      "Country": "USA"
+    }
+  ]
+}
+
+### Get Album
+GET {{HostAddress}}/api/albums/42
+Accept: application/json
+
+### Update Albumns
+PUT {{HostAddress}}/api/albums/41
+Content-Type: application/json
+
+{
+  "id": 42,
+  "name": "New Album2",
+  "genre": "Pop2",
+  "releaseDate": "2023-01-01T00:00:00Z",
+  "totalSold": 10002,
+  "rating": 5,
+  "artists": [
+    {
+      "firstName": "New2",
+      "lastName": "Artist2",
+      "gender": "Male2",
+      "country": "USA2"
+    }
+  ]
+}
+
+### Delete Album
+DELETE {{HostAddress}}/api/albums/39
