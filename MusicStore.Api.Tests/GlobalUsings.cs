@@ -1,0 +1,9 @@
+global using Xunit;
+global using AutoFixture;
+global using AutoFixture.AutoMoq;
+global using AutoMapper;
+global using Moq;
+global using MusicStore.Domain.DTOs;
+global using MusicStore.Domain.Models;
+global using MusicStore.Domain.Repositories;
+global using MusicStore.Infrastructure.Services;

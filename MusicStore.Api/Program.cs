@@ -44,3 +44,5 @@ app.MapDelete("/api/artists/{id}", async (int id, IArtistService artistService)
     => await artistService.DeleteAsync(id));
 
 app.Run();
+
+public partial class Program { }

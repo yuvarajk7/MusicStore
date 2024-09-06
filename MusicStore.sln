@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Domain", "MusicS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Infrastructure", "MusicStore.Infrastructure\MusicStore.Infrastructure.csproj", "{7E7AE192-008F-41B3-ADBB-D8AAB0FD9407}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Api.Tests", "MusicStore.Api.Tests\MusicStore.Api.Tests.csproj", "{5AF420DF-521C-432F-826D-B37737FF952A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Api.IntegrationTests", "MusicStore.Api.IntegrationTests\MusicStore.Api.IntegrationTests.csproj", "{4E623ED7-05AD-4C32-AACB-377AF7789468}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{7E7AE192-008F-41B3-ADBB-D8AAB0FD9407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7AE192-008F-41B3-ADBB-D8AAB0FD9407}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7AE192-008F-41B3-ADBB-D8AAB0FD9407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF420DF-521C-432F-826D-B37737FF952A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF420DF-521C-432F-826D-B37737FF952A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF420DF-521C-432F-826D-B37737FF952A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF420DF-521C-432F-826D-B37737FF952A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E623ED7-05AD-4C32-AACB-377AF7789468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E623ED7-05AD-4C32-AACB-377AF7789468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E623ED7-05AD-4C32-AACB-377AF7789468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E623ED7-05AD-4C32-AACB-377AF7789468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
