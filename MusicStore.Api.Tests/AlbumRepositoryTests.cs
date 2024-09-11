@@ -47,11 +47,15 @@ public class AlbumRepositoryTests
 
             var repository = new AlbumRepository(context);
 
+            var pageNumber = 1;
+            var pageSize = 1;
+            var sortBy = "Name";
+            var ascedning = true;
             // Act
-            var result = await repository.GetAllAsync();
+            var result = await repository.GetAllAsync(pageNumber, pageSize, sortBy, ascedning);
 
             // Assert
-            Assert.Equal(2, result.Count());
+            Assert.Equal(1, result.Count());
         }
     }
     

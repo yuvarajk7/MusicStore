@@ -21,8 +21,8 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 
-app.MapGet("/api/albums", async (IAlbumService albumService) 
-    => await albumService.GetAllAsync());
+app.MapGet("/api/albums", async (int pageNumber, int pageSize, string sortBy, bool ascending, IAlbumService albumService) 
+    => await albumService.GetAllAsync(pageNumber, pageSize, sortBy, ascending));
 app.MapGet("/api/albums/{id}", async (int id, IAlbumService albumService) 
     => await albumService.GetByIdAsync(id));
 app.MapPost("/api/albums", async (AlbumDto albumDto, IAlbumService albumService) 

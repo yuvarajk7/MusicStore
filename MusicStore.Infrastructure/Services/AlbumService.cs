@@ -17,9 +17,9 @@ public class AlbumService : IAlbumService
         _mapper = mapper;
     }
 
-    public async Task<IEnumerable<AlbumDto>> GetAllAsync()
+    public async Task<IEnumerable<AlbumDto>> GetAllAsync(int pageNumber, int pageSize, string sortBy, bool ascending)
     {
-        var albums = await _albumRepository.GetAllAsync();
+        var albums = await _albumRepository.GetAllAsync( pageNumber, pageSize, sortBy, ascending);
         return _mapper.Map<IEnumerable<AlbumDto>>(albums);
     }
 
