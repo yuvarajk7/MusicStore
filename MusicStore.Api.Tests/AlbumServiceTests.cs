@@ -21,16 +21,16 @@ public class AlbumServiceTests
         //Arrange
         var albums = _fixture.Build<Album>().OmitAutoProperties().CreateMany<Album>();
         var albumDtos = _fixture.Build<AlbumDto>().OmitAutoProperties().CreateMany<AlbumDto>();
-        _albumRepositoryMock.Setup(repo => repo.GetAllAsync()).ReturnsAsync(albums);
+        _albumRepositoryMock.Setup(repo => repo.GetAllAsync(1, 10, "Name", true)).ReturnsAsync(albums);
         _mapperMock.Setup(m => m.Map<IEnumerable<AlbumDto>>(albums)).Returns(albumDtos);
         
         // Act
-        var result = await _albumService.GetAllAsync();
+        var result = await _albumService.GetAllAsync(1, 10, "Name", true);
         
         // Assert
         Assert.NotNull(result);
         Assert.Equal(albumDtos, result);
-        _albumRepositoryMock.Verify(repo => repo.GetAllAsync(), Times.Once);
+        _albumRepositoryMock.Verify(repo => repo.GetAllAsync(1, 10, "Name", true), Times.Once);
         _mapperMock.Verify(m => m.Map<IEnumerable<AlbumDto>>(albums), Times.Once);
     }
     
